@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <menuitem  id="company_menu_action" action="company_action"/>
+    <menuitem  id="customer_menu_action" action="customer_action"/>
     <menuitem id="items_root_menu" name="Items">
         <menuitem id="items_first_level_menu" name="Mes items">
             <menuitem  id="items_menu_action" action="items_action"/>

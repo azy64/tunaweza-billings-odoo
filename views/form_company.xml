@@ -15,4 +15,15 @@
             </form>
         </field>
     </record>
+    <record id="company_tree" model="ir.ui.view">
+        <field name="name">company</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <list string="Liste des compagnies">
+                <field name="id"/>
+                <field name="company_name"/>
+                <field name="company_address"/>
+            </list>
+        </field>
+    </record>
 </odoo> 

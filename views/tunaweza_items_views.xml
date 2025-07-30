@@ -11,6 +11,18 @@
         <field name="res_model">facture</field>
         <field name="view_mode">list,form</field>
     </record>
+    <!--model company-->
+    <record id="company_action" model="ir.actions.act_window">
+        <field name="name">My Company</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <!--model customer-->
+    <record id="customer_action" model="ir.actions.act_window">
+        <field name="name">My Customer</field>
+        <field name="res_model">customer</field>
+        <field name="view_mode">list,form</field>
+    </record>
     <!---list or tree** -->
     <record id="items_tree" model="ir.ui.view">
         <field name="name">items</field>
