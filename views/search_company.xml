@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="company_search" model="ir.ui.view">
+        <field name="name">Companies filter</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <search string="Companies filter">
+                <field name="company_name"/>
+                <field name="company_address"/>
+            </search>
+        </field>
+    </record>
+</odoo>

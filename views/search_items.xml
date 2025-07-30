@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="item_search" model="ir.ui.view">
+        <field name="name">items filter</field>
+        <field name="model">items</field>
+        <field name="arch" type="xml">
+            <search string="Items filter">
+                <field name="unit_price"/>
+                <field name="quantity"/>
+            </search>
+        </field>
+    </record>
+</odoo>

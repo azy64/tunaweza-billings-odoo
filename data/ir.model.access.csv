@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+tunaweza-billings.access_company,access_company,tunaweza-billings.model_company,base.group_user,1,1,1,1
+tunaweza-billings.access_items,access_items,tunaweza-billings.model_items,base.group_user,1,1,1,1
+tunaweza-billings.access_customer,access_customer,tunaweza-billings.model_customer,base.group_user,1,1,1,1
+tunaweza-billings.access_facture,access_facture,tunaweza-billings.model_facture,base.group_user,1,1,1,1

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="facture_form" model="ir.ui.view">
+        <field name="name">Factures form</field>
+        <field name="model">facture</field>
+        <field name="arch" type="xml">
+            <form string="Facture form">
+                <sheet>
+                    <header>Ma Facture</header>
+                     <group>
+                        <field name="customer"/>
+                        <field name="company"/>
+                        <separator/>
+                    </group>
+                    <group>
+                        <field name="total_amount"/>
+                        <field name="bill_status"/>
+                        <field name="date_facturation"/>
+                         <field name="due_date"/>
+                        <field name="items"/>
+                    </group>
+                    
+                   
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="company_form" model="ir.ui.view">
+        <field name="name">company form</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <form string="Companies form">
+                <sheet>
+                    <header>Ma company</header>
+                    <group>
+                        <field name="company_name"/>
+                        <field name="company_address"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo> 

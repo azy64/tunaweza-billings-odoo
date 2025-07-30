@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="customer_form" model="ir.ui.view">
+        <field name="name">customer form</field>
+        <field name="model">customer</field>
+        <field name="arch" type="xml">
+            <form string="Customers form">
+                <sheet>
+                    <header>MOn client</header>
+                    <group>
+                        <field name="customer_name"/>
+                        <field name="customer_address"/>
+                        <field name="company"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo> 

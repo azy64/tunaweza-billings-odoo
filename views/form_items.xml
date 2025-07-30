@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="Items_search" model="ir.ui.view">
+        <field name="name">Item form</field>
+        <field name="model">items</field>
+        <field name="arch" type="xml">
+            <form string="Items form">
+                <sheet>
+                    <group>
+                        <field name="item_label"/>
+                        <field name="unit_price"/>
+                        <field name="item_tva"/>
+                        <field name="quantity"/>
+                        <field name="price_all_taxes"/>
+                    </group>
+                    <group>
+                        <field name="item_description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo> 

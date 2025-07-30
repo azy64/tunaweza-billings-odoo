@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="facture_search" model="ir.ui.view">
+        <field name="name">Factures filter</field>
+        <field name="model">facture</field>
+        <field name="arch" type="xml">
+            <search string="Facture filter">
+                <field name="customer"/>
+                <field name="company"/>
+                <field name="date_facturation"/>
+                <field name="due_date"/>
+            </search>
+        </field>
+    </record>
+</odoo>

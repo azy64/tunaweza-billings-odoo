@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="items_root_menu" name="Items">
+        <menuitem id="items_first_level_menu" name="Mes items">
+            <menuitem  id="items_menu_action" action="items_action"/>
+        </menuitem>
+    </menuitem>
+    <menuitem id="facture_root_menu" name="Facture">
+        <menuitem id="facture_first_level_menu" name="Mes factures">
+            <menuitem  id="facture_menu_action" action="facture_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
