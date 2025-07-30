@@ -6,14 +6,26 @@
         <field name="arch" type="xml">
             <form string="Customers form">
                 <sheet>
-                    <header>MOn client</header>
                     <group>
+                        <h1>Mon client</h1>
                         <field name="customer_name"/>
                         <field name="customer_address"/>
                         <field name="company"/>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+     <record id="customer_tree" model="ir.ui.view">
+        <field name="name">customers</field>
+        <field name="model">customer</field>
+        <field name="arch" type="xml">
+            <list string="Liste des clients">
+                <field name="id"/>
+                <field name="customer_name"/>
+                <field name="customer_address"/>
+                <field name="company"/>
+            </list>
         </field>
     </record>
 </odoo> 

@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Facture form">
                 <sheet>
-                    <header>Ma Facture</header>
                      <group>
+                        <h1>Ma Facture</h1>
                         <field name="customer"/>
                         <field name="company"/>
                         <separator/>

@@ -8,7 +8,6 @@ class Facture(models.Model):
         "montant total", 
         required=True, readonly=True, default=0.00,
         compute="_total_computed",
-        inverse="_sub_total_computed",
         store=True
         )
     date_facturation = fields.Datetime("date de facturation", default=fields.Datetime.now,
@@ -20,15 +19,14 @@ class Facture(models.Model):
         ],
         "statut de la facture",required=True, default="pending"
         )
-    items = fields.Many2many("items", string="mes produits")
-    customer= fields.Many2one("customer","Client")
-    company=fields.Many2one("company","Entreprise")
+    items = fields.Many2many("items", string="mes produits", required=True)
+    customer= fields.Many2one("customer","Client", required=True)
+    company=fields.Many2one("company","Entreprise", required=True, )
 
     @api.depends("items")
     def _total_computed(self):
-        for record in self:
-            for item in record.items:
-                record.total_amount+= item.unit_price*item.quantity
+        for item in self.items:
+            self.total_amount+= item.price_all_taxes
 
     def _sub_total_computed(self):
         for record in self:
