@@ -13,6 +13,11 @@ class Items(models.Model):
     price_all_taxes = fields.Float("prix tout taxe comprise",
                                    inverse="_inverse_all_tax_in",
                                     compute="_all_tax_in", store=True)
+    
+    _sql_constraints=[
+        ('check_quantity','CHECK(quantity>0)','la quantité doit etre > 0'),
+        ('check_unit_price','CHECK(unit_price>0)','le prix unitaire doit etre >0')
+        ]
 
     @api.depends("unit_price","item_tva","quantity")
     def _all_tax_in(self):

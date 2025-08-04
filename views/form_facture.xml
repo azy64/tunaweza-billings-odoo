@@ -5,16 +5,28 @@
         <field name="model">facture</field>
         <field name="arch" type="xml">
             <form string="Facture form">
+                <header>
+                     <field name="bill_status" widget="statusbar"/>
+                </header>
                 <sheet>
+                    <h1>Ma Facture</h1>
                      <group>
-                        <h1>Ma Facture</h1>
-                        <field name="customer"/>
-                        <field name="company"/>
+                        <field name="customer">
+                            <list>
+                                <field name="customer_name"/>
+                                <field name="customer_address"/>
+                            </list>
+                        </field>
+                        <field name="company">
+                             <list>
+                                <field name="company_name"/>
+                                <field name="company_address"/>
+                            </list>
+                        </field>
                         <separator/>
                     </group>
                     <group>
                         <field name="total_amount"/>
-                        <field name="bill_status"/>
                         <field name="date_facturation"/>
                          <field name="due_date"/>
                         <field name="items"/>

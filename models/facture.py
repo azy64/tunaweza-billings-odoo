@@ -23,6 +23,11 @@ class Facture(models.Model):
     customer= fields.Many2one("customer","Client", required=True)
     company=fields.Many2one("company","Entreprise", required=True, )
 
+    _sql_constraints=[
+        ('check_due_date','CHECK(due_date>= date_facturation)',"l'échéance doit etre egale ou superiere à la date actuelle"),
+        ('check_total_amount','CHECK(total_amount>0)',"le montant total doit etre > 0")
+        ]
+
     @api.depends("items")
     def _total_computed(self):
         for item in self.items:
